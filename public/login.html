@@ -1,0 +1,245 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online Shopping @ Panauti Fancy Store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--theme-style-->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<link href="css/style4.css" rel="stylesheet" type="text/css" media="all" />	
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="css/bootstrap.min.css"> 
+ <link rel="stylesheet" href="css/global.css">
+ <!-- css -->
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/server.js"></script>
+<script src="js/register.js"></script>
+<script src="js/productadd.js"></script>
+<!--- start-rate---->
+<script src="js/jstarbox.js"></script>
+
+	<link rel="stylesheet" href="css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
+	    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!--FONTS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/responsive.css"><!---//End-rate---->
+</head>
+<body>
+<!--header-->
+<div class="header">
+<!-- <div class="container"> -->
+		<!-- <div class="head"> -->
+			<div class=" logo">
+				<a href="index.html"><img src="images/logo.png" alt=""></a>	
+			</div>
+		<!-- </div> -->
+	<!-- </div> -->
+	<div class="header-top">
+	<div class="User">
+	<img src="images/user1.png"  alt="" onclick= "profileMenu()"/>	
+	<h7> <span><span id ="profileid"/></span> </h7>
+	<div id="Demo" class="dropdown-menu">
+				
+				<a href="register.html" class="dropdown-item" >Register</a><br>
+				<a href="login.html"  class="dropdown-item" >Login</a><br>							 
+				<a href="" class="dropdown-item"  onclick="signout()" id="logoutbtn" >Logout</a>	
+							</div></div>
+
+		<div class="container">
+		<div class="col-sm-5 col-md-offset-2  header-login">
+					<ul >
+						<li><a href="login.html">Login</a></li>
+						<li><a href="register.html">Register</a></li>
+						<li><a onclick="showDiv1()">Checkout</a></li>
+					</ul>
+				</div>
+				
+			
+				<div class="clearfix"> </div>
+		</div>
+		</div>
+		
+		<div class="container">		
+			<div class="head-top">			
+			<div class="col-sm-8 col-md-offset-2 h_menu4">
+				<nav class="navbar nav_bottom" role="navigation">
+ 
+ <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header nav_2">
+      <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     
+   </div> 
+   <!-- Collect the nav links, forms, and other content for toggling -->
+       
+	    <div class="topnav">  
+		  <a href="index.html">Home</a>
+		  <a href="new.html">Men</a>
+		  <a href="women.html">Women</a>
+		  <a href="kids.html">Kids</a>
+		   <!-- <a href="new.html">Sale</a> -->
+		  <a href="about.html">About</a>
+		  <a href="contact.html">Contact</a>
+ 
+</div>
+
+	   <!-- /.navbar-collapse -->
+</nav>
+			</div>
+			<div class="col-sm-2 search-right">				
+						<a href="#checkout">
+					<span class="simpleCart_total" id="simpleCart_total">0</span>
+					<img src="images/cart.png" alt="" onclick="showDiv1()" /></h3>
+				</a> 
+					<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+					<div class="clearfix"> </div>					
+			</div>
+			<div class="clearfix"></div>
+		</div>	
+	</div>	
+</div>
+<!-- header -->	<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+       <h1> <span id="modal-title"> </span></h1>
+      </div>
+      <div class="modal-body">
+	  <h4> <span> Type: </span> <span id="typetitle"></span></h4>
+        <h4> <span id="">Price/Item: $ </span> <span id="pricetitle"> </span> </h4>
+		 <h4> <span id="title"> No.Of Items:<input type="text" id ="noofitems"/></span></h4>
+		 <h4> <span>Total Price:$<span id ="totalpricetitle"/></span></h4>
+      </div>
+      <div class="modal-footer">
+       <button type="button" class="btn btn-primary" onclick="add();">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+		<div class="login" id="menb"">		
+			<form>
+			<div class="col-md-6 login-do">
+			 <h3>User Login</h3>	
+				<div class="login-mail">
+					<input type="text" name="emailid" placeholder="Email" id="eid" required="">
+					<i  class="glyphicon glyphicon-envelope"></i>
+				</div>
+				<div class="login-mail">
+					<input type="password" placeholder="Password" id="pid" >
+					<i class="glyphicon glyphicon-lock"></i>
+				</div>
+				   <a class="news-letter " href="#">
+						 <label class="checkbox1"><input type="checkbox" name="checkbox" ><i> </i>Forget Password</label>
+					   </a>
+				<label class="hvr-skew-backward">
+					<input type="submit" href="login.html" value="login" onclick="login();">
+				</label>
+<h3 id="logmsg"></h3>
+
+				
+			</div>
+			<div class="login-right">
+				 <h3>Create a Free Account</h3>
+				 
+				 <p>Pellentesque neque leo, dictum sit amet accumsan non, dignissim ac mauris. Mauris rhoncus, lectus tincidunt tempus aliquam, odio 
+				 libero tincidunt metus, sed euismod elit enim ut mi. Nulla porttitor et dolor sed condimentum. Praesent porttitor lorem dui, in pulvinar enim rhoncus vitae. Curabitur tincidunt, turpis ac lobortis hendrerit, ex elit vestibulum est, at faucibus erat ligula non neque.</p>
+				<a href="register.html" class=" hvr-skew-backward">Register</a>
+
+			</div>
+
+			<div class="clearfix"> </div>
+			</form>
+		</div>
+<br>
+</div>
+<div class="clearfix"> </div>
+<!--//login-->
+<div class="check-out" id="checkout">
+<script src="js/try.js"> </script>
+<div class="banner-checkout" id="checkoutimg" >
+<img src="images/sales-payment-banner.jpg" alt=""/></div>
+<div class="container">	
+	<div class="bs-example4" data-example-id="simple-responsive-table">
+	<div id="myDynamicTable">
+	</div>
+   </div>
+	<div class="produced">
+	<a href="single.html" class="hvr-skew-backward">Produced To Buy</a>
+	 </div>
+</div>
+</div>			<!-- brandlogoimage -->
+		<!--//footer-->
+<div class="clearfix"> </div>
+
+<!-- brandlogoimage -->
+	<div class="brandlogo">
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/ic.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/ic1.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/ic2.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/ic3.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/ic5.jpeg" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/ic6.png" class="img-responsive" alt="">
+				</div>					
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/ic7.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/ic8.jpg" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/1.png" class="img-responsive" alt="">
+				</div>
+				
+				<div class="clearfix"></div>
+		
+			</div>
+		
+<div class="footer">	
+			<div class="col-sm-5 header-social">		
+									<ul >
+						<li><a href="https://www.twitter.com/" target="_blank"><i></i></a></li>
+						<li><a href="https://www.facebook.com/" target="_blank"><i class="ic1" ></i></a></li>
+					   <li><a href="https://www.instagram.com/" target="_blank"><i class="ic3"></i></a></li>					
+					</ul>
+					
+			</div>
+	<p>Binita Shrestha @ 2017, shresthabveeni@gmail.com</p>
+</div>
+	<script src="js/simpleCart.min.js"> </script>
+<!-- slide -->
+<script src="js/productadd.js"> </script>
+<script src="js/bootstrap.min.js"></script>
+ 
+</body>
+</html>

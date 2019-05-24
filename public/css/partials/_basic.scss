@@ -1,0 +1,43 @@
+body {
+  padding-top:0;
+  display: block;
+  position:absolute;
+  height:auto;
+  bottom:0;
+  top:0;
+  left:0;
+  right:0;
+  font-size: 14px;
+  color: #fff;
+}
+
+#wrapper {
+  min-height:100%;
+  position:relative;
+}
+
+#footer-wrapper {
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  max-height: 200px;
+}
+
+/* BASIC */
+
+img {
+  max-width:100%;
+}
+
+:focus {
+  outline:none;
+}
+
+a:link, a:visited {
+  text-decoration:none;
+}
+
+ul.no-bullets li {
+  list-style:none !important;
+}

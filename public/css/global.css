@@ -1,0 +1,147 @@
+body {
+  padding-top: 0;
+  display: block;
+  position: absolute;
+  height: auto;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: 14px;
+  color: #fff; }
+
+#wrapper {
+  min-height: 100%;
+  position: relative; }
+
+#footer-wrapper {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-height: 200px; }
+
+/* BASIC */
+img {
+  max-width: 100%; }
+
+:focus {
+  outline: none; }
+
+a:link, a:visited {
+  text-decoration: none; }
+
+ul.no-bullets li {
+  list-style: none !important; }
+
+/*FONT FACE*/
+/*@font-face {
+    font-family: 'nevis';
+    src: url('../fonts/nevis.eot');
+    src: url('../fonts/nevis.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/nevis.woff') format('woff'),
+         url('../fonts/nevis.ttf') format('truetype'),
+         url('../fonts/nevis.svg#nevis') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}*/
+#header-wrapper {
+  background: #e67e22;
+  color: #fff;
+  text-align: center;
+  padding: 12px 0;
+  text-transform: uppercase; }
+
+.bn_container {
+  width: 100%;
+  max-width: 1500px; }
+
+#menu-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0; }
+  #menu-wrap .menu-cat {
+    width: 420px;
+    margin: 15px;
+    cursor: pointer; }
+    #menu-wrap .menu-cat ._name {
+      background: #e67e22;
+      padding: 12px; }
+
+.modal-dialog {
+  width: 600px;
+  max-width: 80%; }
+  .modal-dialog .modal-content {
+	width: 600px;
+    border-radius: 0;
+    color: #000; }
+    .modal-dialog .modal-content .close {
+      position: absolute;
+      right: 12px;
+      top: 15px;
+      z-index: 150; }
+    .modal-dialog .modal-content .loading {
+	 width: 300px;
+      text-align: center;
+      margin-top: 36px;
+      letter-spacing: 9px; }
+      .modal-dialog .modal-content .loading.off {
+        display: none; }
+
+#menu-cat-content > h1, #menu-cat-content h2, #menu-cat-content h3, #menu-cat-content h4, #menu-cat-content h5, #menu-cat-content h6 {
+  margin: 0 0 15px 0; }
+
+.item-adder {
+  background: #f39c12;
+  padding: 12px;
+  color: #fff;
+  margin-bottom: 15px; }
+  .item-adder .itemName {
+    margin: 0; }
+  .item-adder .item-details p span {
+    font-weight: bold; }
+  .item-adder .item-details input[type="number"] {
+    color: #000;
+    margin-right: 3px; }
+  .item-adder .item-details button {
+    color: #000; }
+
+#cart a {
+  color: #fff;
+  font-size: 18px; }
+
+#cart-content .cart-item input {
+  padding: 10px; }
+#cart-content .cart-item button {
+  background: #27ae60;
+  color: #fff;
+  padding: 12px;
+  border: none; }
+  #cart-content .cart-item button.remove {
+    background: #c0392b; }
+#cart-content .cart-item table {
+  width: 100%; }
+
+button.order, button.finish {
+  background: #2c3e50;
+  border: none;
+  color: #fff;
+  padding: 12px; }
+
+.tex-center{text-align: center;}
+
+h3.text-center, #invoice-content table tr{border-bottom: 1px dashed #eee; padding-bottom:10px;}
+.menu-cat ._name{font-weight: bold; font-size: 18px;}
+
+#footer {
+    background: #e67e22;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    text-transform: uppercase;}
+
+
+
+/*# sourceMappingURL=global.css.map */

@@ -1,0 +1,858 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online Shopping @ Panauti Fancy Store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--theme-style-->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<link href="css/style4.css" rel="stylesheet" type="text/css" media="all" />	
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="css/bootstrap.min.css"> 
+ <link rel="stylesheet" href="css/global.css">
+ <!-- css -->
+<script src="js/jquery.min.js"></script>
+<script src="js/productadd.js"></script>
+<script src="js/product.js"></script>
+<script src="js/filter.js"></script>
+<!-- <script src="js/mongostore.js"></script> -->
+
+<!--- start-rate---->
+<script src="js/jstarbox.js"></script>
+	<link rel="stylesheet" href="css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
+	    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!--FONTS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/jquery.js"></script>			
+	<link href="css/form.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+
+
+<!--header-->
+<div class="header">
+<!-- <div class="container"> -->
+		<!-- <div class="head"> -->
+			<div class=" logo">
+				<a href="index.html"><img src="images/logo.png" alt=""></a>	
+			</div>
+		<!-- </div> -->
+	<!-- </div> -->
+	<div class="header-top">
+	<div class="User">
+	<img src="images/user1.png"  alt="" onclick= "profileMenu()"/>	
+	<h7> <span><span id ="profileid"/></span> </h7>
+	<div id="Demo"class="dropdown-menu">
+				
+				<a href="register.html" class="dropdown-item" >Register</a><br>
+				<a href="login.html"  class="dropdown-item" >Login</a><br>							 
+				<a href="" class="dropdown-item"  onclick="signout()" id="logoutbtn" >Logout</a>	
+							</div></div>
+
+		<div class="container">
+		<div class="col-sm-5 col-md-offset-2  header-login">
+					<ul >
+						<li><a href="login.html">Login</a></li>
+						<li><a href="register.html">Register</a></li>
+<li><a onclick="showDiv1()">Checkout</a></li></ul>
+				</div>
+				
+			
+				<div class="clearfix"> </div>
+		</div>
+		</div>
+		
+		<div class="container">		
+			<div class="head-top">			
+			<div class="col-sm-8 col-md-offset-2 h_menu4">
+				<nav class="navbar nav_bottom" role="navigation">
+ 
+ <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header nav_2">
+      <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     
+   </div> 
+   <!-- Collect the nav links, forms, and other content for toggling -->
+       
+	   <div class="topnav">  
+		  <a href="index.html">Home</a>
+		  <a href="new.html" id="Men" onclick="setGen(this);">Men</a>
+		  <a href="women.html" id="Women" onclick="setGen(this);">Women</a>
+		  <a href="kids.html" id="Kid" onclick="setGen(this);">Kids</a>
+		  <!-- <a href="sale.html" id="Sale" onclick="setGen(this);">Sale</a> -->
+		  <a href="about.html">About</a>
+		  <a href="contact.html">Contact</a>
+</div>
+
+	   <!-- /.navbar-collapse -->
+</nav>
+			</div>
+			<div class="col-sm-2 search-right">				
+						<a href="#checkout">
+					<span class="simpleCart_total" id="simpleCart_total">0</span>
+					<img src="images/cart.png" alt="" onclick="showDiv1()" /></h3>
+				</a> 
+					<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+					<div class="clearfix"> </div>					
+			</div>
+			<div class="clearfix"></div>
+		</div>	
+	</div>	
+</div>
+<!-- header -->	<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+       <!-- <h1> <span id="modal-title"> </span></h1> -->
+      </div>
+      <div class="modal-body">
+	  <h4> <span> Type: </span> <span id="typetitle"></span></h4>
+        <h4> <span id="">Price/Item: $ </span> <span id="pricetitle"> </span> </h4>	
+		<h4> <span>No.of Items:<span id ="noofitems"/></span>			
+	<select name="Country" id="size"  onmousedown="if(this.options.length>5){this.size=5;}" onclick="myNewFunction(this);"  onblur="this.size=0;">
+										<option value="1">1</option>
+										<option>2</option>
+										<option>3</option>										
+										 </select>		</h4>
+		 <!-- <h4> <span>Total Price:$<span id ="totalpricetitle"/></span></h4> -->
+		  
+      </div>
+      <div class="modal-footer">
+       <button type="button" class="btn btn-primary" onclick="add();">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <--checkout-->
+<!--banner-->
+<div class="banner-topkids" id="menb">
+<img src="images/tumblr_static_kids_banner-4.jpg" alt="" onclick="showDiv1()" />
+</div>
+	<!--content-->
+		<!--content-->
+		<div class="product" id ="product">
+			<div class="container">
+			<div class="col-md-9">
+				<div class="mid-popular" id="KidClothes">
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id="0">
+					<div class=" mid-pop">				
+						<img src="images/kidsclothes/kc1.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "0" onclick= "myFunction(this);">
+							<a><img src="images/.png" alt=""></a>
+							</div>							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+								<p ><em class="item_price">$250.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id="1">
+					<div class=" mid-pop">				
+						<img src="images/kidsclothes/kc2.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "1" onclick= "myFunction(this);">
+							<a><img src="images/ca.png" alt=""></a>
+							</div>							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+								<p ><em class="item_price">$500.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id="2">
+					<div class=" mid-pop">				
+						<img src="images/kidsclothes/kc3.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "2" onclick= "myFunction(this);">
+							<a><img src="images/ca.png" alt=""></a>
+							</div>							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+								<p ><em class="item_price">$1000.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id="3">
+					<div class=" mid-pop">				
+						<img src="images/kidsclothes/kc4.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "3" onclick= "myFunction(this);">
+							<a><img src="images/ca.png" alt=""></a>
+							</div>							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+								<p ><em class="item_price">$1200.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id="4">
+					<div class=" mid-pop">				
+						<img src="images/kidsclothes/kc5.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "4" onclick= "myFunction(this);">
+							<a><img src="images/ca.png" alt=""></a>
+							</div>							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+								<p ><em class="item_price">$1500.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id="5">
+					<div class=" mid-pop">				
+						<img src="images/kidsclothes/kc6.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "5" onclick= "myFunction(this);">
+							<a><img src="images/ca.png" alt=""></a>
+							</div>							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+								<p ><em class="item_price">$2200.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id="6">
+					<div class=" mid-pop">				
+						<img src="images/kidsclothes/kc7.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "6" onclick= "myFunction(this);">
+							<a><img src="images/ca.png" alt=""></a>
+							</div>							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+								<p ><em class="item_price">$2700.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id="7">
+					<div class=" mid-pop">				
+						<img src="images/kidsclothes/kc8.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "7" onclick= "myFunction(this);">
+							<a><img src="images/ca.png" alt=""></a>
+							</div>						
+							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+								<p ><em class="item_price">$3000.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id ="8">
+					<div class=" mid-pop">				
+						<img src="images/kidsclothes/kc9.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "8" onclick= "myFunction(this);">
+							<a><img src="images/ca.png" alt=""></a>
+							</div>							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+								<p ><em class="item_price">$1500.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>		
+					
+					<div class="clearfix"></div>
+				</div>
+		<!-- //sssssss -->
+		<div class="mid-popular" id="KidBag" style="display:none" >
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id="9">
+					<div class=" mid-pop">				
+						<img src="images/kidsbag/kb1.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "9" onclick= "myFunction(this);">
+							<a><img src="images/.png" alt=""></a>
+							</div>							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+								<p ><em class="item_price">$250.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id="10">
+					<div class=" mid-pop">				
+						<img src="images/kidsbag/kb2.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "10" onclick= "myFunction(this);">
+							<a><img src="images/ca.png" alt=""></a>
+							</div>							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+								<p ><em class="item_price">$500.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id="11">
+					<div class=" mid-pop">				
+						<img src="images/kidsbag/kb3.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "11" onclick= "myFunction(this);">
+							<a><img src="images/ca.png" alt=""></a>
+							</div>							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+								<p ><em class="item_price">$1000.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id="12">
+					<div class=" mid-pop">				
+						<img src="images/kidsbag/kb4.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "12" onclick= "myFunction(this);">
+							<a><img src="images/ca.png" alt=""></a>
+							</div>							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+								<p ><em class="item_price">$1200.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id="13">
+					<div class=" mid-pop">				
+						<img src="images/kidsbag/kb5.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "13" onclick= "myFunction(this);">
+							<a><img src="images/ca.png" alt=""></a>
+							</div>							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+								<p ><em class="item_price">$1500.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id="14">
+					<div class=" mid-pop">				
+						<img src="images/kidsbag/kb6.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "14" onclick= "myFunction(this);">
+							<a><img src="images/ca.png" alt=""></a>
+							</div>							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+								<p ><em class="item_price">$2200.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id="15">
+					<div class=" mid-pop">				
+						<img src="images/kidsbag/kb7.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "15" onclick= "myFunction(this);">
+							<a><img src="images/ca.png" alt=""></a>
+							</div>							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+								<p ><em class="item_price">$2700.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id="16">
+					<div class=" mid-pop">				
+						<img src="images/kidsbag/kb8.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "16" onclick= "myFunction(this);">
+							<a><img src="images/ca.png" alt=""></a>
+							</div>							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+
+							<p ><em class="item_price">$3000.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id ="17">
+					<div class=" mid-pop">				
+						<img src="images/kidsbag/kb9.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "17" onclick= "myFunction(this);">
+							<a><img src="images/ca.png" alt=""></a>
+							</div>							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+								<p ><em class="item_price">$1500.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>		
+					<div class="clearfix"></div>
+				</div>
+				<div class="mid-popular" id="KidShoes" style="display:none">
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id="18">
+					<div class=" mid-pop">				
+						<img src="images/kidsshoes/ks1.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "18" onclick= "myFunction(this);">
+							<a><img src="images/ca.png" alt=""></a>
+							</div>							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+								<p ><em class="item_price">$250.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id="19">
+					<div class=" mid-pop">				
+						<img src="images/kidsshoes/ks2.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "19" onclick= "myFunction(this);">
+							<a><img src="images/ca.png" alt=""></a>
+							</div>							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+								<p ><em class="item_price">$500.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id="20">
+					<div class=" mid-pop">				
+						<img src="images/kidsshoes/ks3.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "20" onclick= "myFunction(this);">
+							<a><img src="images/ca.png" alt=""></a>
+							</div>							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+								<p ><em class="item_price">$1000.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id="21">
+					<div class=" mid-pop">				
+						<img src="images/kidsshoes/ks4.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "21" onclick= "myFunction(this);">
+							<a><img src="images/ca.png" alt=""></a>
+							</div>							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+								<p ><em class="item_price">$1200.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id="22">
+					<div class=" mid-pop">				
+						<img src="images/kidsshoes/ks5.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "22" onclick= "myFunction(this);">
+							<a><img src="images/ca.png" alt=""></a>
+							</div>							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+								<p ><em class="item_price">$1500.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id="23">
+					<div class=" mid-pop">				
+						<img src="images/kidsshoes/ks6.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "23" onclick= "myFunction(this);">
+							<a><img src="images/ca.png" alt=""></a>
+							</div>							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+								<p ><em class="item_price">$2200.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id="24">
+					<div class=" mid-pop">				
+						<img src="images/kidsshoes/ks7.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "18" onclick= "myFunction(this);">
+							<a><img src="images/ca.png" alt=""></a>
+							</div>							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+								<p ><em class="item_price">$2700.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id="25">
+					<div class=" mid-pop">				
+						<img src="images/kidsshoes/ks8.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "25" onclick= "myFunction(this);">
+							<a><img src="images/ca.png" alt=""></a>
+							</div>							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+								<p ><em class="item_price">$3000.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>
+					<div class="col-md-4 item-grid1 simpleCart_shelfItem" id ="26">
+					<div class=" mid-pop">				
+						<img src="images/kidsshoes/ks9.jpeg" class="zoom" alt="">						
+						<div class="mid-1">				
+							<div class="img item_add" id = "26" onclick= "myFunction(this);">
+							<a><img src="images/ca.png" alt=""></a>
+							</div>							
+							<div class="mid-3">
+							<select name="size" id="itemsize" onmousedown="if(this.options.length>5){this.size=5;}" onclick="selectSize(this);"   onblur="this.size=0;">
+										<option value="small">S</option>
+										<option value="Medium">M</option>
+										<option value="Large">L</option>
+										<option value="Xtra Large">XL</option>
+										<option value="Double Extra Large">XXL</option>
+										 </select>
+								<p ><em class="item_price">$1500.00</em></p>	
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					</div>		
+					
+					<div class="clearfix"></div>
+				</div>	
+		
+			</div>
+				<div class="col-md-3 product-bottom">
+			<!--categories-->
+				<div class=" rsidebar span_1_of_left">
+						<h4 class="cate">Categories</h4>
+							 <ul class="menu-drop">
+							<li class="item1"><a href="new.html" id="Men" onclick="setGen(this);">Men </a></li>
+							<li class="item2"><a href="women.html" id="Women" onclick="setGen(this);">Women </a></li>
+							<li class="item3"><a href="kids.html" id="Kids" onclick="setGen(this);">Kids</a></li>
+							<!-- <li class="item3"><a href="kids.html" id="Sale" onclick="setGen(this);">Sale</a></li> -->
+						</ul>
+					</div>
+					<section  class="sky-form">
+					<h4 class="cate">Price Range</h4>					
+						 <div class="col col-4">
+								<label class="checkbox"><input type="checkbox" name="checkbox" id ="500" onclick="filter(this);"><i></i>0 - 500 (2)</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox" id ="1000" onclick="filter(this);"><i></i>500 - 1000(1)</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox" id ="1500" onclick="filter(this);"><i></i>1000 - 1500 (2)</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox" id ="2000" onclick="filter(this);"><i></i>1500  Above(4)</label>
+						 <!-- </div> -->
+					 </div>
+				 </section> 				 				 
+					 <section  class="sky-form">
+						<h4 class="cate">Type</h4>
+						
+								<div class="col col-4">
+									<label class="checkbox"><input type="checkbox" name="checkbox" checked="" id="KClothes" onclick="filterbag(this);"><i></i>Clothes (30)</label>
+								</div>
+								<div class="col col-4">
+									<label class="checkbox"><input type="checkbox" name="checkbox" id="KBag" onclick="filterbag(this);"><i></i>Bags  (30)</label>
+									<label class="checkbox"><input type="checkbox" name="checkbox" id="KShoe" onclick="filterbag(this);"><i></i>Shoes (30)</label>
+									
+								</div>
+							
+				   </section>
+				   			
+		</div>
+			<div class="clearfix"></div>
+			</div>
+			</div>						
+	<!--//content-->
+		
+		
+<div class="check-out" id="checkout">
+<script src="js/try.js"> </script>
+<div class="banner-checkout" id="checkoutimg" >
+<img src="images/sales-payment-banner.jpg" alt=""/></div>
+<div class="container">	
+	<div class="bs-example4" data-example-id="simple-responsive-table">
+	<div id="myDynamicTable">
+	</div>
+   </div>
+	<div class="produced">
+	<a class="hvr-skew-backward"  onclick=showmsg();>Proceed To Buy</a>
+	 </div>
+	<div class="produced">
+	<a  id="demo" ></a>
+	 </div>
+
+</div>
+</div>
+<script>
+function showmsg() {
+  document.getElementById("demo").innerHTML = "Sorry Service Not available Now!!!!";
+}
+</script>
+<!-- brandlogoimage -->
+	<div class="brandlogo">
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/ic.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/ic1.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/ic2.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/ic3.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/ic5.jpeg" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/ic6.png" class="img-responsive" alt="">
+				</div>					
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/ic7.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/ic8.jpg" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/1.png" class="img-responsive" alt="">
+				</div>
+				
+				<div class="clearfix"></div>
+		
+			</div>
+			<!-- brandlogoimage -->
+	
+<!--//footer-->
+<div class="footer">	
+			<div class="col-sm-5 header-social">		
+										<ul >
+						<li><a href="https://www.twitter.com/" target="_blank"><i></i></a></li>
+						<li><a href="https://www.facebook.com/" target="_blank"><i class="ic1" ></i></a></li>
+					   <li><a href="https://www.instagram.com/" target="_blank"><i class="ic3"></i></a></li>					
+					</ul>
+					
+			</div>
+	<p>Binita Shrestha @ 2018, shresthabveeni@gmail.com</p>
+</div>
+<!--//footer-->	
+	<script src="js/productadd.js"> </script>
+	<script src="js/bootstrap.min.js"></script>
+<!-- slide -->
+
+
+</body>
+</html>

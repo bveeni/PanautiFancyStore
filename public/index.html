@@ -1,0 +1,572 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online Shopping @ Panauti Fancy Store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--theme-style-->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<link href="css/style4.css" rel="stylesheet" type="text/css" media="all" />	
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="css/bootstrap.min.css"> 
+ <link rel="stylesheet" href="css/global.css">
+ <!-- css -->
+ 
+<script src="js/jquery.min.js"></script>
+<script src="js/productadd.js"></script>
+<script src="js/product.js"> </script>
+ <script src="js/crossdomain-ajax.js"></script>
+ <script src="js/server_1.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+<!--header-->
+<!--header-->
+<div class="header">
+<!-- <div class="container">		 -->
+			<div class=" logo">
+				<a href="index.html"><img src="images/logo.png" alt=""></a>	
+			</div>		
+	<!-- </div> -->
+	<div class="header-top">
+	<div class="User">
+	<img src="images/user1.png"  alt="" onclick= "profileMenu()"/>	
+	<h7> <span><span id ="profileid"/></span> </h7>
+	<div id="Demo" class="dropdown-menu">
+				<a href="register.html" class="dropdown-item" >Register</a><br>
+				<a href="login.html"  class="dropdown-item" >Login</a><br>							 
+				<a href="" class="dropdown-item"  onclick="signout()" id="logoutbtn" >Logout</a>	
+							</div></div>
+		<div class="container">
+		<div class="col-sm-5 col-md-offset-2  header-login">
+					<ul >
+						<li><a href="login.html">Login</a></li>
+						<li><a href="register.html">Register</a></li>
+						<li><a onclick="showDiv1()">Checkout</a></li>
+						</ul>
+				</div>
+				
+			
+				<div class="clearfix"> </div>
+		</div>
+		</div>
+		
+		<div class="container">		
+			<div class="head-top">			
+			<div class="col-sm-8 col-md-offset-2 h_menu4">
+				<nav class="navbar nav_bottom" role="navigation">
+ 
+ <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header nav_2">
+      <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     
+   </div> 
+   <!-- Collect the nav links, forms, and other content for toggling -->
+       
+	    <div class="topnav">  
+		  <a href="index.html">Home</a>
+		  <a href="new.html" id="Men" onclick="setGen(this);">Men</a>
+		  <a href="women.html" id="Women" onclick="setGen(this);">Women</a>
+		  <a href="kids.html" id="Kids" onclick="setGen(this);">Kids</a>
+		  <!-- <a href="sale.html" id="Sale" onclick="setGen(this);">Sale</a> -->
+		  <a href="about.html">About</a>
+		  <a href="contact.html">Contact</a>
+ 
+</div>
+
+	   <!-- /.navbar-collapse -->
+</nav>
+			</div>
+		<div class="col-sm-2 search-right">				
+						<a href="#checkout">
+					<span class="simpleCart_total" id="simpleCart_total">0</span>
+					<img src="images/cart.png" alt="" onclick="showDiv1()" /></h3>
+				</a> 
+					<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+					<div class="clearfix"> </div>					
+			</div>
+			<div class="clearfix"></div>
+		</div>	
+	</div>	
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+       <!-- <h1> <span id="modal-title"> </span></h1> -->
+      </div>
+      <div class="modal-body">
+	  <h4> <span> Type: </span> <span id="typetitle"></span></h4>
+        <h4> <span id="">Price/Item: $ </span> <span id="pricetitle"> </span> </h4>	
+		<h4> <span>No.of Items:<span id ="noofitems"/></span>			
+	<select name="Country" id="size"  onmousedown="if(this.options.length>5){this.size=5;}" onclick="myNewFunction(this);"  onblur="this.size=0;">
+										<option value="1">1</option>
+										<option>2</option>
+										<option>3</option>										
+										 </select>		</h4>
+		 <!-- <h4> <span>Total Price:$<span id ="totalpricetitle"/></span></h4> -->
+		  
+      </div>
+      <div class="modal-footer">
+       <button type="button" class="btn btn-primary" onclick="add();">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--banner-->
+<div class="banner" id="menb">
+<div class="container">
+<section class="rw-wrapper">
+				<h1 class="rw-sentence">
+					<span>Panauti Fancy Store</span>
+					<div class="rw-words rw-words-1">
+						<span>Beautiful Designs</span>
+						<span>Classy Style</span>
+						<span>Adorable Outfit</span>
+						<span>With</span>
+						<span>Affordable & Worth Price</span>
+						<span>Hurry Up</span>
+					</div>
+					<div class="rw-words rw-words-2">
+						<span>Style is a way to say</span>
+						<span>who you are!!!</span>
+						<span>without having to speak</span>
+						<span>Come and Join</span>
+						<span>"Panauti Fancy Store"</span>
+						<span>For showing your style Mantra</span>
+					</div>
+				</h1>
+			</section>
+			
+			</div>
+</div>
+<div class="container">
+	<div id="design-cast">					
+    	<h3 align="center">Choices</h3>
+		<label class="line"></label>
+    <div class="member">
+	<a href="new.html" id="kids" onclick="setGen(this);">Men
+        <img src="images/men.jpg" class="elementone" alt="Responsive image" /></a>
+        <div class="name">
+            <br /></div>
+    </div>
+    <div class="member">
+	<a href="women.html" id="kids" onclick="setGen(this);">Women
+        <img src="images/woman.jpg" class="elementone" alt="Responsive image" />
+        <div class="name"></a>
+            <br /></div>
+    </div>
+    <div class="member">
+	<a href="kids.html" id="kids" onclick="setGen(this);">Kids
+        <img src="images/kid.jpg" class="elementone" alt="Responsive image" /></a>
+        <div class="name">
+		
+            <br /></div>
+    </div>
+</div>
+</div>	
+<div class="galleryone" id="gallery_id1"> 
+<h3 align="center">Shopping Gallery</h3>
+<label class="line1">  </label>
+<div class="content-mid">
+				<div class="mid-popular">
+				<div class="col-md-3 item-grid simpleCart_shelfItem">
+					<h2>Men Bags</h2>
+
+<div class="w3-content w3-display-container">
+<div class=" mid-pop">
+	<div class="pro-img">	
+  <img class="mySlides" src="images/bag1.jpg" style="width:100%">
+	<div class="mid-3">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "9" onclick= "myFunction(this,'menbag');"  alt=""></a>
+	<p ><em class="item_price">$250.00</em></p>	</div>							
+	  <img class="mySlides" src="images/bag8.jpg" style="width:100%">
+	  <div class="mid-3">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "10" onclick= "myFunction(this,'menbag');"  alt=""></a>
+	<p ><em class="item_price">$500.00</em></p>	</div>	
+	  <img class="mySlides" src="images/bag2.jpg" style="width:100%">
+	  <div class="mid-3">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "11" onclick= "myFunction(this,'menbag');"  alt=""></a>
+	<p ><em class="item_price">$1000.00</em></p>	</div>	
+	  <img class="mySlides" src="images/bag3.jpg" style="width:100%">
+	  <div class="mid-3">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "12" onclick= "myFunction(this,'menbag');"  alt=""></a>
+	<p ><em class="item_price">$12000.00</em></p>	</div>	
+	  <img class="mySlides" src="images/bag4.jpg" style="width:100%">
+	  <div class="mid-3">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "13" onclick= "myFunction(this,'menbag');"  alt=""></a>
+	<p ><em class="item_price">$1500.00</em></p>	</div>	
+	  <img class="mySlides" src="images/bag5.jpg" style="width:100%">
+	  <div class="mid-3">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "14" onclick= "myFunction(this,'menbag');"  alt=""></a>
+	<p ><em class="item_price">$2200.00</em></p>	</div>	
+	  <img class="mySlides" src="images/bag6.jpg" style="width:100%">
+	  <div class="mid-3">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "15" onclick= "myFunction(this,'menbag');"  alt=""></a>
+	<p ><em class="item_price">$2700.00</em></p>	</div>	
+	  <img class="mySlides" src="images/bag7.jpg" style="width:100%">
+	  <div class="mid-3">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "16" onclick= "myFunction(this,'menbag');"  alt=""></a>
+	<p ><em class="item_price">$3000.00</em></p>	</div>	
+	  <img class="mySlides" src="images/bag9.jpg" style="width:100%">
+	  <div class="mid-3">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "17" onclick= "myFunction(this,'menbag');"  alt=""></a>
+	<p ><em class="item_price">$1500.00</em></p>	</div>	
+	  
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" id="G1" onclick="plusDivs(1,this)">&#10095;</button>
+  </div>
+  
+   </div>
+    </div>
+	 </div>
+	 
+	 <div class="col-md-3 item-grid simpleCart_shelfItem">
+					<h2>Women Bags </h2>
+
+<div class="w3-content w3-display-container">
+<div class=" mid-pop">
+	<div class="pro-img">
+	
+  <img class="mySlides2" src="images/lbag1.jpg" style="width:100%">
+  <div class="mid-4">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "9" onclick= "myFunction(this,'womenbag');"  alt=""></a>
+	<p ><em class="item_price">$250.00</em></p>	</div>	
+	  
+  <img class="mySlides2" src="images/lbag2.jpg" style="width:100%">
+  <div class="mid-4">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "10" onclick= "myFunction(this,,'womenbag');"  alt=""></a>
+	<p ><em class="item_price">$500.00</em></p>	</div>	
+	  
+  <img class="mySlides2" src="images/lbag3.jpg" style="width:100%">
+  <div class="mid-4">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "11" onclick= "myFunction(this,'womenbag');"  alt=""></a>
+	<p ><em class="item_price">$1000.00</em></p>	</div>	
+	  
+  <img class="mySlides2" src="images/lbag4.jpg" style="width:100%">
+  <div class="mid-4">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "12" onclick= "myFunction(this,'womenbag');"  alt=""></a>
+	<p ><em class="item_price">$1200.00</em></p>	</div>	
+	  
+  <img class="mySlides2" src="images/lbag5.jpg" style="width:100%">
+  <div class="mid-4">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "13" onclick= "myFunction(this,'womenbag');"  alt=""></a>
+	<p ><em class="item_price">$1500.00</em></p>	</div>	
+	  
+  <img class="mySlides2" src="images/lbag6.jpg" style="width:100%">
+  <div class="mid-4">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "14" onclick= "myFunction(this,'womenbag');"  alt=""></a>
+	<p ><em class="item_price">$2200.00</em></p>	</div>	
+	  
+  <img class="mySlides2" src="images/lbag7.jpg" style="width:100%">
+  <div class="mid-4">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "15" onclick= "myFunction(this,'womenbag');"  alt=""></a>
+	<p ><em class="item_price">2700.00</em></p>	</div>	
+	  
+  <img class="mySlides2" src="images/lbag8.jpg" style="width:100%">
+  <div class="mid-4">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "16" onclick= "myFunction(this,'womenbag');"  alt=""></a>
+	<p ><em class="item_price">$3000.00</em></p>	</div>	
+	  
+  <img class="mySlides2" src="images/lbag9.jpg" style="width:100%">
+  <div class="mid-4">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "17" onclick= "myFunction(this,'womenbag');"  alt=""></a>
+	<p ><em class="item_price">$1500.00</em></p>	</div>	
+	  
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10096;</button>
+  <button class="w3-button w3-black w3-display-right" id="G2" onclick="plusDivs(1,this)">&#10097;</button>
+  </div>
+  
+   </div>
+    </div>
+	 </div>
+	  <div class="col-md-3 item-grid simpleCart_shelfItem">
+					<h2>Men Clothes </h2>
+
+<div class="w3-content w3-display-container">
+<div class=" mid-pop">
+	<div class="pro-img">
+	
+  <img class="mySlides3" src="images/pc.jpg" style="width:100%">
+  <div class="mid-5">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "0" onclick= "myFunction(this,'menclothes');"  alt=""></a>
+	<p ><em class="item_price">$250.00</em></p>	</div>	
+	  
+  <img class="mySlides3" src="images/menclothes/pc1.jpg" style="width:100%">
+  <div class="mid-5">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "1" onclick= "myFunction(this,'menclothes');"  alt=""></a>
+	<p ><em class="item_price">$500.00</em></p>	</div>	
+	  
+  <img class="mySlides3" src="mages/menclothes/pc2.jpg" style="width:100%">
+  <div class="mid-5">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "2" onclick= "myFunction(this,'menclothes');"  alt=""></a>
+	<p ><em class="item_price">$1000.00</em></p>	</div>	
+	  
+  <img class="mySlides3" src="mages/menclothes/pc7.jpg" style="width:100%">
+  <div class="mid-5">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "3" onclick= "myFunction(this,'menclothes');"  alt=""></a>
+	<p ><em class="item_price">$1200.00</em></p>	</div>	
+	  
+  <img class="mySlides3" src="mages/menclothes/pc3.jpg" style="width:100%">
+  <div class="mid-5">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "4" onclick= "myFunction(this,'menclothes');"  alt=""></a>
+	<p ><em class="item_price">$1500.00</em></p>	</div>	
+	  
+  <img class="mySlides3" src="mages/menclothes/pc4.jpg" style="width:100%">
+  <div class="mid-5">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "5" onclick= "myFunction(this,'menclothes');"  alt=""></a>
+	<p ><em class="item_price">$2200.00</em></p>	</div>	
+	  
+  <img class="mySlides3" src="mages/menclothes/pc5.jpg" style="width:100%">
+  <div class="mid-5">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "6" onclick= "myFunction(this,'menclothes');"  alt=""></a>
+	<p ><em class="item_price">$2700.00</em></p>	</div>	
+	  
+  <img class="mySlides3" src="mages/menclothes/pc6.jpg" style="width:100%">
+  <div class="mid-5">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "7" onclick= "myFunction(this,'menclothes');"  alt=""></a>
+	<p ><em class="item_price">$3000.00</em></p>	</div>	
+	  
+  <img class="mySlides3" src="mages/menclothes/pc7.jpg" style="width:100%">
+  <div class="mid-5">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "8" onclick= "myFunction(this,'menclothes');"  alt=""></a>
+	<p ><em class="item_price">$1500.00</em></p>	</div>	
+	  
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10096;</button>
+  <button class="w3-button w3-black w3-display-right" id="G3" onclick="plusDivs(1,this)">&#10097;</button>
+  </div>
+  
+   </div>
+    </div>
+	 </div>
+	 <div class="col-md-3 item-grid simpleCart_shelfItem">
+					<h2>Women Clothes </h2>
+
+<div class="w3-content w3-display-container">
+<div class=" mid-pop">
+	<div class="pro-img">
+	
+  <img class="mySlides4" src="images/lt1.jpg" style="width:100%">
+  <div class="mid-6">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "0" onclick= "myFunction(this,'womenclothes');"  alt=""></a>
+	<p ><em class="item_price">$250.00</em></p>	</div>	
+	  
+  <img class="mySlides4" src="images/lt2.jpg" style="width:100%">
+  <div class="mid-6">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "1" onclick= "myFunction(this,'womenclothes');"  alt=""></a>
+	<p ><em class="item_price">$500.00</em></p>	</div>	
+	  
+  <img class="mySlides4" src="images/lt6.jpg" style="width:100%">
+  <div class="mid-6">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "2" onclick= "myFunction(this,'womenclothes');"  alt=""></a>
+	<p ><em class="item_price">$1000.00</em></p>	</div>	
+	  
+  <img class="mySlides4" src="images/lt3.jpg" style="width:100%">
+  <div class="mid-6">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "3" onclick= "myFunction(this,'womenclothes');"  alt=""></a>
+	<p ><em class="item_price">$1200.00</em></p>	</div>	
+	  
+  <img class="mySlides4" src="images/lt4.jpg" style="width:100%">
+  <div class="mid-6">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "4" onclick= "myFunction(this,'womenclothes');"  alt=""></a>
+	<p ><em class="item_price">$1500.00</em></p>	</div>	
+	  
+  <img class="mySlides4" src="images/lt5.jpg" style="width:100%">
+  <div class="mid-6">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "5" onclick= "myFunction(this,'womenclothes');"  alt=""></a>
+	<p ><em class="item_price">$2200.00</em></p>	</div>	
+	  
+  <img class="mySlides4" src="images/lt7.jpg" style="width:100%">
+  <div class="mid-6">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "6" onclick= "myFunction(this,'womenclothes');"  alt=""></a>
+	<p ><em class="item_price">$2700.00</em></p>	</div>	
+	  
+  <img class="mySlides4" src="images/lt8.jpg" style="width:100%">
+  <div class="mid-6">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "7" onclick= "myFunction(this,'womenclothes');"  alt=""></a>
+	<p ><em class="item_price">$3000.00</em></p>	</div>	
+	  
+  <img class="mySlides4" src="images/lt9.jpg" style="width:100%">
+  <div class="mid-6">													 
+	<a><img src="images/ca.png" class="img item_add"  id = "8" onclick= "myFunction(this,'womenclothes');"  alt=""></a>
+	<p ><em class="item_price">$1500.00</em></p>	</div>	
+	  
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10096;</button>
+  <button class="w3-button w3-black w3-display-right" id="G4" onclick="plusDivs(1,this)">&#10097;</button>
+  </div>
+  
+   </div>
+    </div>
+	 </div>
+  
+  </div>
+</div>	
+ 			<!-- <div class="brandback"> -->
+				<!-- <div class="col-md-3 brand-grid"> -->
+					<!-- <img src="images/ic.png" class="img-responsive" alt=""> -->
+				<!-- </div> -->
+				<!-- <div class="col-md-3 brand-grid"> -->
+					<!-- <img src="images/ic1.png" class="img-responsive" alt=""> -->
+				<!-- </div> -->
+				<!-- <div class="col-md-3 brand-grid"> -->
+					<!-- <img src="images/ic2.png" class="img-responsive" alt=""> -->
+				<!-- </div> -->
+				<!-- <div class="col-md-3 brand-grid"> -->
+					<!-- <img src="images/ic3.png" class="img-responsive" alt=""> -->
+				<!-- </div> -->
+				<!-- <div class="clearfix"></div> -->
+			<!-- </div> -->
+			<!--//brand-->
+			</div>
+					
+	
+<!-- <div class="clearfix"></div> -->
+	<!--//content-->
+<div class="check-out" id="checkout">
+<script src="js/try.js"> </script>
+<div class="banner-checkout" id="checkoutimg" >
+<img src="images/sales-payment-banner.jpg" alt=""/></div>
+<div class="container">	
+	<div class="bs-example4" data-example-id="simple-responsive-table">
+	<div id="myDynamicTable">
+	</div>
+   </div>
+	<div class="produced">
+	<a class="hvr-skew-backward"  onclick=showmsg();>Proceed To Buy</a>
+	 </div>
+	<div class="produced">
+	<a  id="demo" ></a>
+	 </div>
+
+</div>
+</div>
+<script>
+function showmsg() {
+  document.getElementById("demo").innerHTML = "Sorry Service Not available Now!!!!";
+}
+</script>
+<!-- <div class="col-md-6 contact-top"> -->
+<!-- <form id="simplify-payment-form" action="" method="POST" style="display:none"> -->
+    <!-- <div>  -->
+        <!-- <label>Credit Card Number: </label> -->
+        <!-- <input id="cc-number" type="text" maxlength="20" autocomplete="off" value="" autofocus /> -->
+    <!-- </div> -->
+    <!-- <div> -->
+        <!-- <label>CVC: </label> -->
+        <!-- <input id="cc-cvc" type="text" maxlength="4" autocomplete="off" value=""/> -->
+    <!-- </div> -->
+    <!-- <div> -->
+        <!-- <label>Expiry Date: </label> -->
+        <!-- <select id="cc-exp-month"> -->
+            <!-- <option value="01">Jan</option> -->
+            <!-- <option value="02">Feb</option> -->
+            <!-- <option value="03">Mar</option> -->
+            <!-- <option value="04">Apr</option> -->
+            <!-- <option value="05">May</option> -->
+            <!-- <option value="06">Jun</option> -->
+            <!-- <option value="07">Jul</option> -->
+            <!-- <option value="08">Aug</option> -->
+            <!-- <option value="09">Sep</option> -->
+            <!-- <option value="10">Oct</option> -->
+            <!-- <option value="11">Nov</option> -->
+            <!-- <option value="12">Dec</option> -->
+        <!-- </select> -->
+        <!-- <select id="cc-exp-year"> -->
+            <!-- <option value="13">2013</option> -->
+            <!-- <option value="14">2014</option> -->
+            <!-- <option value="15">2015</option> -->
+            <!-- <option value="16">2016</option> -->
+            <!-- <option value="17">2017</option> -->
+            <!-- <option value="18">2018</option> -->
+            <!-- <option value="19">2019</option> -->
+            <!-- <option value="20">2020</option> -->
+            <!-- <option value="21">2021</option> -->
+            <!-- <option value="22">2022</option> -->
+        <!-- </select> -->
+    <!-- </div> -->
+    <!-- <button id="process-payment-btn" type="submit">Process Payment</button> -->
+<!-- </form> -->
+<!-- </div> -->
+	<!-- <div class="clearfix"></div> -->
+	
+	 <!-- </body><!--//footer--> 
+		<!-- <script src="js/gallery.js"></script> -->
+		<!-- <script src="js/bootstrap.min.js"></script> -->
+		
+				<div class="brandlogo">
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/ic.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/ic1.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/ic2.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/ic3.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/ic5.jpeg" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/ic6.png" class="img-responsive" alt="">
+				</div>					
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/ic7.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/ic8.jpg" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-3 brand-grid">
+					<img src="images/brandimag/1.png" class="img-responsive" alt="">
+				</div>
+				
+				<div class="clearfix"></div>
+		
+			</div>
+		<!--//footer-->
+
+<div class="footer">	
+			<div class="col-sm-5 header-social">		
+									<ul >
+						<li><a href="https://www.twitter.com/" target="_blank"><i></i></a></li>
+						<li><a href="https://www.facebook.com/" target="_blank"><i class="ic1" ></i></a></li>
+					   <li><a href="https://www.instagram.com/" target="_blank"><i class="ic3"></i></a></li>					
+					</ul>
+					
+			</div>
+	<p>Binita Shrestha @ 2018, shresthabveeni@gmail.com</p>
+</div>
+	
+<!-- slide -->
+<script src="js/productadd.js"> </script>
+<script src="js/gallery.js"> </script>
+<script src="js/bootstrap.min.js"></script>
+ 
+</body>
+
+				<!-- </div> -->
+
+</html>
